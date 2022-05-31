@@ -1,0 +1,55 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window  = Library.CreateLib("Tower Of Jump Script by - Pinokyo", "Synapse")
+local Tab     = Window:NewTab("Main Script")
+local Section = Tab:NewSection("Teleport)")
+Section:NewButton("Teleport To Top", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(32, 223.288, 142.485))
+end)
+Section:NewButton("Teleport To Winner Roon", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-38476.746, 384.355, 8.845))
+end)
+Section:NewButton("Teleport To Start Place", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(32, 8.25, 34))
+end)
+Section:NewButton("Teleport To Last Tower", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(32, 215.75, 79.5))
+end)
+local Section = Tab:NewSection("Gamepass Teleport - (Robux Needed)")
+Section:NewButton("Teleport To Ultra Fire Trail", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(68.718, 1.05, 29.199))
+end)
+Section:NewButton("Teleport To Midnight Trail", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(68.718, 1.05, 37.81))
+end)
+Section:NewButton("Teleport To Golden Trail", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-4.732, 1.05, 37.81))
+end)
+Section:NewButton("Teleport To Ocean Trail", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-4.732, 1.05, 29.199))
+end)
+
+local Tab     = Window:NewTab("Player")
+local Section = Tab:NewSection("Player Script")
+local Section = Tab:NewSection("Reset To Remove Speed,POV")
+local Section = Tab:NewSection("INF JUMP WILL NOT LOSE")
+
+Section:NewButton("Inf Jumps", "Enables Inf Jumps", function()
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
+Section:NewToggle("Fov", "Changes Fov", function(state)
+    if state then
+        game.Workspace.CurrentCamera.FieldOfView = 120
+    else
+        game.Workspace.CurrentCamera.FieldOfView = 80
+    end
+end)
+
+Section:NewSlider("Sonic Speed", "Sussy Speed", 250, 120, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
