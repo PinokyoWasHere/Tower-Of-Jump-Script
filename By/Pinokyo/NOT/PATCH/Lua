@@ -6,7 +6,7 @@ Section:NewButton("Teleport To Top", "ButtonInfo", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(32, 223.288, 142.485))
 end)
 Section:NewButton("Teleport To Winner Roon", "ButtonInfo", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-38476.746, 384.355, 8.845))
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-38457, 387, -11))
 end)
 Section:NewButton("Teleport To Start Place", "ButtonInfo", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(32, 8.25, 34))
@@ -151,14 +151,12 @@ Section:NewToggle("Auto Win"  , "Dupe Start", function(value)
         end
 end)
 
-local Section = Tab:NewSection("Close&open")
-
-Section:NewKeybind("Close Tab open Tab", "Close Tab open Tab", Enum.KeyCode.E, function()
-    Library:ToggleUI()
-end)
-
 local Tab     = Window:NewTab("#CREDITS")
 local Section = Tab:NewSection("Owner: Pinokyo")
 local Section = Tab:NewSection("YOU CANT#2861")
 local Section = Tab:NewSection("DM For Help")
 local Section = Tab:NewSection("Thank You For Using My Script!")
+
+Section:NewKeybind("Close E open E", "Close Tab open Tab", Enum.KeyCode.E, function()
+    Library:ToggleUI()
+end)
